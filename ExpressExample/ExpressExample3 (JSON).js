@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(function (req, res, next) {
     console.log('첫 번째 미들웨어에서 요청을 처리함')
 
-    res.send({name:'김건우', age:25});
+    res.send({name:'mike', age:25});
 
 });
 
