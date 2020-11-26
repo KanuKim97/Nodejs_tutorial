@@ -1,4 +1,4 @@
 # Nodejs_tutorial
 -------------------------------
-
-IDE = Brackets(Node.js)
+* 개발환경
+ - Brackets
