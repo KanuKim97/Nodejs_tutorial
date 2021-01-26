@@ -163,7 +163,7 @@ router.route('/process/photo').post(upload.array('photo', 1), function (req, res
         if (Array.isArray(files)) {
             console.log("배열에 들어있는 파일의 갯수 : %d", files.length);
 
-            for (var index = 0; index < files.length; index++) {
+            for (var index = 0; index < files.length; index++){
                 originalname = files[index].originalname;
                 filename = files[index].filename;
                 mimetype = files[index].mimetype;
@@ -173,7 +173,7 @@ router.route('/process/photo').post(upload.array('photo', 1), function (req, res
             console.log("파일 갯수 : 1");
 
             originalname = files[index].originalname;
-            filename = files[index].filename;
+            filename = files[index].name;
             mimetype = files[index].mimetype;
             size = files[index].size;
         }
@@ -189,6 +189,7 @@ router.route('/process/photo').post(upload.array('photo', 1), function (req, res
         res.write('<p>MIME TYPE : ' + mimetype + '</p>');
         res.write('<p>파일 크기 : ' + size + '</p>');
         res.end();
+        
     } catch (err) {
         console.dir(err.stack);
     }
